@@ -1,0 +1,69 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #000;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.player {
+    max-width: 750px;
+    border: 5px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.player_video {
+    width: 100%;
+}
+
+.player_controls {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    transform: translateY(100%) translateY(-5px);
+    transition: all 0.3s;
+    width: 100%;
+}
+
+input[type="range"] {
+    width: 30%;
+}
+
+.seconds {
+    background: rgba(0,0,0,0.2);
+    border: 0;
+    color: yellow;
+}
+
+
+.player:hover .player_controls{
+    transform: translateY(0)
+}
+
+.player:hover .progress {
+    height: 15px;
+}
+
+.progress {
+    height: 5px;
+    width: 100%;
+    display: flex;
+    background: rgba(0,0,0,0.5);
+    transition: height 0.3s; 
+    cursor: ew-resize;
+}
+
+.progress_filled {
+    background: pink;
+}
